@@ -1,10 +1,12 @@
 package Phone;
 
+import Phone.Board.Board;
+
 public class Phone {
 	public Battery battery = new Battery("배터리1",25);
 	public Board board = new Board("cpu1",4,"gpu1",128,"ram1",16);
 	public Frame frame = new Frame("골격1", "노랑");
-	public Mic mic = new Mic("마이크1", "좋은성능");
+	public Mic mic = Mic.makeMic("마이크1", "좋은성능"); //
 	public Touchpad touch = new Touchpad("터치패드1", "적당한 성능");
 	public Display display = new Display("액정1", "18:9");
 	public Speaker speaker = new Speaker("스피커1", "적당한 성능");
