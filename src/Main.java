@@ -1,18 +1,26 @@
 import Phone.*;
+import Phone.Board.Board;
 
 public class Main {
 	public static void main(String[] args) {
-		Phone rolipop = new Phone();
+		Phone rolipop = new Phone("배터리1",25);
 		
-		rolipop.print(rolipop);
-		rolipop.battery = new Battery("배터리2", 50);	
-		rolipop.print(rolipop.battery);
-		rolipop.display = new Display("액정2", "21:9");	
-		rolipop.print(rolipop.display);
-		rolipop.frame = new Frame("골격2","검정");
-		rolipop.print(rolipop.frame);
-		rolipop.print(rolipop.speaker);
-		//rolipop.speaker = new Speaker("스피커2","안좋은 성능");   변경 불가능
-		rolipop.print(rolipop.speaker);
+		rolipop.print();
+
+		rolipop.setBattery(new Battery("새로운 베터리", 100));
+		rolipop.setDisplay(new Display("새로운 디스플레이", "18:9"));
+
+		rolipop.print();
+
+		Phone phone1 = new Phone(new Battery("", 123),
+					new Display("", ""),
+					new Board("", 1,"", 1, "", 128),
+					new Frame("", ""),
+					new Mic("", ""),
+					new Touchpad("", ""),
+					new Speaker("", ""));
+		phone1.print();
+
+
 	}
 }

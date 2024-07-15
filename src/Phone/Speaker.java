@@ -1,13 +1,15 @@
 package Phone;
 
-class Speaker {
+public class Speaker {
 	private String name;
 	private String performance;
-	Speaker(String name, String performance){
+
+	public Speaker(String name, String performance){
 		this.name = name;
 		this.performance = performance;
 	}
-	void print() {
+
+	public void print() {
 		System.out.println("스피커 이름 : "+name + "\n스피커 성능 : "+performance);
 	}
 }
